@@ -1,0 +1,124 @@
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
+html {
+  -webkit-print-color-adjust: exact;
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
+  color: #002841;
+}
+
+a,
+a.visited {
+  color: inherit;
+  text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+  font-size: 80%;
+  color: #444;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+}
+
+.page-title {
+  font-size: 2em;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.subtitle {
+  font-size: 1.5em;
+  text-transform: uppercase;
+  margin-bottom: 3rem;
+  text-align: center;
+  color: #0069b2;
+}
+
+.content-block {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 50px;
+}
+
+.content-block section {
+  padding: 0 20px;
+  max-width: 50%;
+  width: 100%;
+}
+
+mark {
+  background-color: transparent;
+}
+
+.indented {
+  padding-left: 1.5em;
+}
+
+img {
+  max-width: 100%;
+}
+
+@media only print {
+  img {
+    max-height: 100vh;
+    object-fit: contain;
+  }
+}
+
+.image {
+  border: none;
+  margin: 1.5em 0;
+  padding: 0;
+  border-radius: 0;
+  text-align: center;
+}
+
+.page-body {
+  padding: 70px 15px 40px;
+  max-width: 1140px;
+  margin: 0 auto;
+}
+.title-desc {
+  margin-bottom: 2em;
+}
+.list li {
+  border-bottom: 1px solid #eee;
+  font-size: 14px;
+  list-style: none;
+  padding: 10px 0 10px 40px;
+  position: relative;
+}
+
+.list li::before {
+  content: "";
+  background: url(https://mydss.safe-tech.ru/img/myDSS_list_picture.svg) no-repeat left top;
+  height: 13px;
+  width: 13px;
+  position: absolute;
+  left: 0;
+  top: 13px;
+}
+
+.highlight-blue_background {
+  font-weight: 700;
+  color: #0069b2;
+}
